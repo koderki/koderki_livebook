@@ -22,8 +22,10 @@ config :livebook, :learn_notebooks, [
       description: "koderki.pl - zmieniaj świat kodując"
     }
   }
-  # %{path: "#{File.cwd!()}/priv/samples/basics/sys_class_leds.livemd", details: nil},
 ]
+
+# The default path used on file selection screens
+config :livebook, :home, "#{File.cwd!()}/koderki-curriculum"
 
 # Enable the embedded runtime which isn't available by default
 config :livebook, :runtime_modules, [Livebook.Runtime.Embedded, Livebook.Runtime.Attached]
